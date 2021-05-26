@@ -1,8 +1,10 @@
 #body[theme="blue"]{
-    --fontColor: #2748b3
+    --fontColor: #2748b3;
+    --headerColor: #6b8eff;
 }
 #body[theme="red"]{
     --fontColor: #c62a2a;
+    --headerColor: #b70b0b;
 }
 
 $base-padding: 16px;
@@ -80,11 +82,8 @@ article {
     }
 }
 
-
-h1,
-h2,
-h6 {
-    color: #6b8eff;
+h1, h2, h6 {
+    color: var(--headerColor);
 }
 
 h1 {
@@ -103,7 +102,7 @@ h6 {
     border: 1px solid #ccc;
     padding:$base-padding;
     margin: $base-margin;
-    color: #2748b3;
+    color: var(--fontColor);
     background-color: #000;
 
     &--success{
@@ -113,7 +112,7 @@ h6 {
 
     &--error {
         @extend .message;
-        background-color: red;
+        background-color: #d57171;
     }
     &--warning {
         @extend .message;
@@ -124,12 +123,20 @@ h6 {
 
 .color-button{
     cursor: pointer;
+    margin: $base-margin
 }
 .color-button#blue{
     color: $blue-color;
 }
 .color-button#red{
     color: $red-color;
+}
+.button-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    grid-auto-flow: column;
+    justify-content: center;
 }
 
 

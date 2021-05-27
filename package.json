@@ -7,6 +7,7 @@
     "postcss-cli": "^8.3.1"
   },
   "scripts": {
-    "minify-css": "postcss newstyle.css > newstyle.min.css"
+    "minify-css-blue": "postcss style_blue.css > style_blue.min.css",
+    "minify-css-red": "postcss style_red.css > style_red.min.css"
   }
 }
